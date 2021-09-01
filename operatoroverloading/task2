@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class Counter{
+	private:
+		int x;
+	public:
+		Counter(int y)
+		{
+			x=y;
+		}
+		void operator++()
+		{
+			++x;
+		}
+		
+		void operator--()
+		{
+			--x;
+		}
+		
+		void display()
+		{
+			cout<<x<<endl;
+		}
+};
+int main()
+{
+	Counter C(4);
+	cout<<"INCREMENT IS ";
+	++C;
+	C.display();
+	cout<<"DECREMENT IS ";
+	--C;
+	C.display();
+	return 0;
+}
